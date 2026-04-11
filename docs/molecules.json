@@ -1,0 +1,164 @@
+{
+	"categorias": {
+		"Fármaco": "#4caf50",
+		"Droga": "#f44336",
+		"Biológico": "#ff9800",
+		"Cristal": "#2196f3",
+		"Carbono": "#9c27b0"
+	},
+	"moleculas": [
+		{
+			"arquivo": "ethanol.pdb",
+			"nome": "Etanol",
+			"formula": "C₂H₅OH",
+			"peso": "46,07 g/mol",
+			"categoria": "Biológico",
+			"descricao": "Álcool produzido pela fermentação de açúcares. Usado como combustível, solvente e antisséptico.",
+			"curiosidade": "A fermentação alcoólica é praticada há pelo menos 9.000 anos — uma das mais antigas biotecnologias humanas."
+		},
+		{
+			"arquivo": "aspirin.pdb",
+			"nome": "Aspirina",
+			"formula": "C₉H₈O₄",
+			"peso": "180,16 g/mol",
+			"categoria": "Fármaco",
+			"descricao": "Analgésico, anti-inflamatório e anticoagulante. Um dos medicamentos mais usados no mundo.",
+			"curiosidade": "Sintetizada pela Bayer em 1897, a aspirina foi o primeiro fármaco produzido industrialmente."
+		},
+		{
+			"arquivo": "caffeine.pdb",
+			"nome": "Cafeína",
+			"formula": "C₈H₁₀N₄O₂",
+			"peso": "194,19 g/mol",
+			"categoria": "Droga",
+			"descricao": "Estimulante do sistema nervoso central presente em café, chá e energéticos.",
+			"curiosidade": "A cafeína bloqueia receptores de adenosina — a molécula que sinaliza sono — mas não reduz a adenosina acumulada."
+		},
+		{
+			"arquivo": "nicotine.pdb",
+			"nome": "Nicotina",
+			"formula": "C₁₀H₁₄N₂",
+			"peso": "162,23 g/mol",
+			"categoria": "Droga",
+			"descricao": "Alcaloide estimulante do tabaco. Age em receptores colinérgicos e causa dependência intensa.",
+			"curiosidade": "Em doses altas é um veneno potente. Foi amplamente usada como inseticida natural até meados do século XX."
+		},
+		{
+			"arquivo": "lsd.pdb",
+			"nome": "LSD",
+			"formula": "C₂₀H₂₅N₃O",
+			"peso": "323,43 g/mol",
+			"categoria": "Droga",
+			"descricao": "Substância psicodélica sintética derivada do ácido lisérgico. Ativa receptores de serotonina.",
+			"curiosidade": "Descoberto acidentalmente por Albert Hofmann em 1943. A dose ativa é de apenas 25 microgramas."
+		},
+		{
+			"arquivo": "cocaine.pdb",
+			"nome": "Cocaína",
+			"formula": "C₁₇H₂₁NO₄",
+			"peso": "303,36 g/mol",
+			"categoria": "Droga",
+			"descricao": "Alcaloide estimulante extraído das folhas de coca. Bloqueia a recaptação de dopamina.",
+			"curiosidade": "Foi ingrediente da Coca-Cola original de 1886 até 1903, quando foi substituída pela cafeína."
+		},
+		{
+			"arquivo": "cholesterol.pdb",
+			"nome": "Colesterol",
+			"formula": "C₂₇H₄₆O",
+			"peso": "386,65 g/mol",
+			"categoria": "Biológico",
+			"descricao": "Lipídio essencial às membranas celulares e precursor de hormônios esteroides e vitamina D.",
+			"curiosidade": "Cerca de 30% da membrana de células animais é colesterol — sem ele, as células perdem estabilidade."
+		},
+		{
+			"arquivo": "lycopene.pdb",
+			"nome": "Licopeno",
+			"formula": "C₄₀H₅₆",
+			"peso": "536,87 g/mol",
+			"categoria": "Biológico",
+			"descricao": "Carotenoide responsável pela cor vermelha do tomate. Potente antioxidante.",
+			"curiosidade": "O tomate cozido tem mais licopeno biodisponível do que o cru: o calor rompe a parede celular e aumenta a absorção."
+		},
+		{
+			"arquivo": "glucose.pdb",
+			"nome": "Glicose",
+			"formula": "C₆H₁₂O₆",
+			"peso": "180,16 g/mol",
+			"categoria": "Biológico",
+			"descricao": "Principal fonte de energia celular. Produto da fotossíntese, quebrada pela glicólise.",
+			"curiosidade": "O cérebro humano consome cerca de 120 g de glicose por dia — 20% do total do organismo."
+		},
+		{
+			"arquivo": "Al2O3.pdb",
+			"nome": "Óxido de Alumínio",
+			"formula": "Al₂O₃",
+			"peso": "101,96 g/mol",
+			"categoria": "Cristal",
+			"descricao": "Composto iônico presente na bauxita. Base para produção de alumínio metálico por eletrólise.",
+			"curiosidade": "O corindo (Al₂O₃) com traços de cromo forma o rubi; com ferro e titânio, forma a safira."
+		},
+		{
+			"arquivo": "cubane.pdb",
+			"nome": "Cubano",
+			"formula": "C₈H₈",
+			"peso": "104,15 g/mol",
+			"categoria": "Carbono",
+			"descricao": "Hidrocarboneto sintético com geometria cúbica perfeita. Ângulos de ligação C–C de 90°, altamente tensionados.",
+			"curiosidade": "Considerado impossível de sintetizar até 1964. Sua geometria tensionada armazena muita energia — potencial uso em propelentes."
+		},
+		{
+			"arquivo": "cu.pdb",
+			"nome": "Cobre",
+			"formula": "Cu",
+			"peso": "63,55 g/mol",
+			"categoria": "Cristal",
+			"descricao": "Metal de transição com estrutura cristalina cúbica de face centrada (CFC). Excelente condutor elétrico.",
+			"curiosidade": "O cobre foi o primeiro metal trabalhado pelo ser humano, há mais de 10.000 anos — a Era do Cobre precedeu o Bronze."
+		},
+		{
+			"arquivo": "caf2.pdb",
+			"nome": "Fluorita",
+			"formula": "CaF₂",
+			"peso": "78,07 g/mol",
+			"categoria": "Cristal",
+			"descricao": "Mineral iônico com estrutura cúbica. Transparente ao ultravioleta, usado em lentes e metalurgia.",
+			"curiosidade": "A fluorita define o grau 4 na escala de dureza de Mohs e é a principal fonte industrial de flúor."
+		},
+		{
+			"arquivo": "nacl.pdb",
+			"nome": "Sal",
+			"formula": "NaCl",
+			"peso": "58,44 g/mol",
+			"categoria": "Cristal",
+			"descricao": "Cloreto de sódio. Cristal iônico com estrutura cúbica, essencial à vida e ao sabor dos alimentos.",
+			"curiosidade": "O corpo humano contém cerca de 250 g de sal — suficiente para encher um saleiro. O desequilíbrio iônico é fatal."
+		},
+		{
+			"arquivo": "ybco.pdb",
+			"nome": "YBCO",
+			"formula": "YBa₂Cu₃O₇",
+			"peso": "666,19 g/mol",
+			"categoria": "Cristal",
+			"descricao": "Supercondutor de alta temperatura. Abaixo de ~93 K perde completamente a resistência elétrica.",
+			"curiosidade": "Primeiro material a ser supercondutor acima de 77 K (temperatura do nitrogênio líquido), em 1987 — viabilizou aplicações práticas."
+		},
+		{
+			"arquivo": "buckyball.pdb",
+			"nome": "Fulereno C₆₀",
+			"formula": "C₆₀",
+			"peso": "720,66 g/mol",
+			"categoria": "Carbono",
+			"descricao": "Alótropo esférico do carbono com 60 átomos dispostos em pentágonos e hexágonos, como uma bola de futebol.",
+			"curiosidade": "Nomeado em homenagem ao arquiteto Buckminster Fuller. Sua descoberta em 1985 rendeu o Nobel de Química em 1996."
+		},
+		{
+			"arquivo": "graphite.pdb",
+			"nome": "Grafite",
+			"formula": "C",
+			"peso": "12,01 g/mol",
+			"categoria": "Carbono",
+			"descricao": "Alótropo do carbono em camadas hexagonais (grafeno) ligadas por forças de van der Waals. Condutor elétrico.",
+			"curiosidade": "O lápis risca porque as camadas de grafite deslizam facilmente entre si. Cada traço deixa camadas de poucos átomos de espessura."
+		}
+	]
+}
