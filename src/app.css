@@ -1,0 +1,210 @@
+body {
+	background-color: #050505;
+	background: radial-gradient(ellipse at center, rgba(43,45,48,1) 0%, rgba(0,0,0,1) 100%);
+}
+
+/* ── Molécula 3D ── */
+/* Estilo das ligações entre átomos */
+.bond {
+	width: 4px;
+	height: 10px;
+	background: #eee;
+	display: block;
+}
+.bond-paralela,
+.bond-aromatica {
+	width: 3px;
+}
+/* Segundo traço interrompido: ordem fracionária de um anel aromático */
+.bond-aromatica {
+	background: repeating-linear-gradient(
+		to bottom,
+		#eee 0 5px,
+		transparent 5px 9px
+	);
+}
+/* Wrapper para átomo (imagem + rótulo) */
+.atom-wrap {
+	position: relative;
+	width: 35px;
+	height: 35px;
+}
+.atom-wrap img { width: 100%; height: 100%; }
+.atom-wrap.apontado img {
+	filter: brightness(1.45) drop-shadow(0 0 6px rgba(255,255,255,0.95));
+}
+/* Rótulo com símbolo do elemento químico */
+.atom-label {
+	position: absolute;
+	top: 50%; left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	font-size: 10px;
+	font-weight: bold;
+	font-family: monospace;
+	text-shadow: 0 0 3px #000, 0 0 3px #000;
+	pointer-events: none;
+	display: none;
+}
+
+/* ── Loading ── */
+/* Indicador de carregamento centralizado */
+#loading {
+	position: fixed;
+	inset: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: rgba(255,255,255,0.4);
+	font-size: 14px;
+	pointer-events: none;
+	z-index: 5;
+	transition: opacity 0.3s;
+}
+#loading.hidden { opacity: 0; }
+
+/* ── Painel info ── */
+/* Painel de informações da molécula (canto inferior esquerdo) */
+#mol-info {
+	position: fixed;
+	bottom: 20px;
+	left: 20px;
+	background: rgba(0,0,0,0.75);
+	border: 1px solid rgba(255,255,255,0.1);
+	border-radius: 10px;
+	padding: 14px 18px;
+	max-width: 275px;
+	z-index: 10;
+	font-size: 13px;
+	line-height: 1.6;
+}
+#mol-info h2 {
+	margin: 0 0 6px;
+	font-size: 15px;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+/* Badge colorido da categoria */
+.category-badge {
+	font-size: 10px;
+	font-weight: normal;
+	padding: 2px 7px;
+	border-radius: 10px;
+	color: #fff;
+	white-space: nowrap;
+}
+#mol-info .formula     { font-size: 14px; color: #ffdd57; margin-bottom: 2px; }
+#mol-info .weight      { color: #888; font-size: 11px; margin-bottom: 8px; }
+#mol-info .description { color: #ccc; font-size: 12px; line-height: 1.5; margin-bottom: 8px; }
+/* Caixa de curiosidade com borda azul à esquerda */
+#mol-info .curiosidade {
+	color: #aaddff;
+	font-size: 11px;
+	line-height: 1.5;
+	border-left: 2px solid rgba(100,180,255,0.4);
+	padding-left: 8px;
+	margin-bottom: 10px;
+}
+#mol-info .stats { color: #88ccff; font-size: 12px; }
+
+/* ── Legenda ── */
+/* Legenda de elementos químicos (canto inferior direito) */
+#legend {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	background: rgba(0,0,0,0.75);
+	border: 1px solid rgba(255,255,255,0.1);
+	border-radius: 10px;
+	padding: 12px 16px;
+	z-index: 10;
+	font-size: 12px;
+	min-width: 110px;
+}
+#legend h3 { margin: 0 0 8px; font-size: 13px; color: #fff; }
+.legend-item {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-bottom: 5px;
+	color: #ddd;
+}
+/* Ponto colorido representando o elemento */
+.legend-dot {
+	width: 13px; height: 13px;
+	border-radius: 50%;
+	flex-shrink: 0;
+	border: 1px solid rgba(255,255,255,0.2);
+}
+.legend-note {
+	margin-top: 8px;
+	color: #aaa;
+	font-size: 11px;
+	line-height: 1.4;
+}
+#legend-focus {
+	margin-bottom: 8px;
+	color: #fff;
+	font-weight: bold;
+}
+
+/* ── Atalhos de teclado ── */
+/* Dicas de atalhos de teclado, abaixo do título */
+#keys {
+	position: fixed;
+	top: 48px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	gap: 10px;
+	flex-wrap: wrap;
+	justify-content: center;
+	z-index: 10;
+	pointer-events: none;
+}
+.key-hint {
+	background: rgba(0,0,0,0.6);
+	border: 1px solid rgba(255,255,255,0.1);
+	border-radius: 5px;
+	padding: 3px 8px;
+	font-size: 11px;
+	color: rgba(255,255,255,0.45);
+	white-space: nowrap;
+}
+.key-hint kbd {
+	color: rgba(255,255,255,0.7);
+	font-family: monospace;
+}
+
+@media ( max-width: 640px ) {
+	#keys { display: none; }
+
+	#mol-info,
+	#legend {
+		left: 8px;
+		right: 8px;
+		max-width: none;
+	}
+
+	#mol-info {
+		bottom: 8px;
+		max-height: 30vh;
+		overflow: auto;
+	}
+
+	#legend {
+		bottom: calc(30vh + 16px);
+		max-height: 18vh;
+		overflow: auto;
+	}
+
+	#legend-items {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 4px 12px;
+	}
+
+	.legend-item { margin-bottom: 0; }
+}

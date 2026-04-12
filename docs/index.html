@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<title>Visualizador de Moléculas</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link rel="stylesheet" href="main.css">
+		<link rel="stylesheet" href="app.css">
+	</head>
+	<body>
+		<!-- Container principal onde o Three.js renderiza a cena 3D -->
+		<div id="container"></div>
+		<!-- Título no topo da tela -->
+		<div id="info">Visualizador de Moléculas</div>
+		<!-- Indicador de carregamento -->
+		<div id="loading">Carregando...</div>
+
+		<!-- Painel de informações da molécula (canto inferior esquerdo) -->
+		<div id="mol-info">
+			<h2 id="info-name">—<span class="category-badge" id="info-category"></span></h2>
+			<div class="formula"     id="info-formula">—</div>
+			<div class="weight"      id="info-weight">—</div>
+			<div class="description" id="info-description">—</div>
+			<div class="curiosidade" id="info-curiosidade">—</div>
+			<div class="stats"       id="info-stats">—</div>
+		</div>
+
+		<!-- Legenda de elementos químicos (canto inferior direito) -->
+		<div id="legend">
+			<h3>Elementos</h3>
+			<div id="legend-focus" hidden></div>
+			<div id="legend-items"></div>
+		</div>
+
+		<!-- Dicas de atalhos de teclado (parte inferior central) -->
+		<div id="keys">
+			<span class="key-hint"><kbd>← →</kbd> Y</span>
+			<span class="key-hint"><kbd>↑ ↓</kbd> X</span>
+			<span class="key-hint"><kbd>Q E</kbd> Z</span>
+			<span class="key-hint"><kbd>+ -</kbd> Zoom</span>
+			<span class="key-hint"><kbd>[ ]</kbd> Molécula</span>
+			<span class="key-hint"><kbd>Espaço</kbd> Rotação</span>
+			<span class="key-hint"><kbd>R</kbd> Reset</span>
+			<span class="key-hint"><kbd>F</kbd> Tela cheia</span>
+		</div>
+
+		<!-- Three.js 0.180.0 e lil-gui 0.20.0. Os addons em jsm/ continuam locais. -->
+		<script type="importmap">
+			{
+				"imports": {
+					"three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+					"three/addons/": "./jsm/",
+					"lil-gui": "https://cdn.jsdelivr.net/npm/lil-gui@0.20.0/dist/lil-gui.esm.min.js"
+				}
+			}
+		</script>
+		<!-- Script principal da aplicação (módulo ES6) -->
+		<script type="module" src="app.js"></script>
+	</body>
+</html>
